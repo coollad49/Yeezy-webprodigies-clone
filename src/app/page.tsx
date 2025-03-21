@@ -1,7 +1,9 @@
 import ProductGrid from "@/components/ui/productGrid";
+import { getProducts } from "@/actions/product";
 
-export default function Home() {
+export default async function Home () {
+  const products = await getProducts()
   return (
-    <ProductGrid products={[]}/>
+    <ProductGrid products={products}/>
   );
 }

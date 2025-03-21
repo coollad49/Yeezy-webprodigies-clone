@@ -114,7 +114,8 @@ const ProductGrid = ({products}: Props) => {
                         className='flex flex-col group relative'
                     >
                         <div className='aspect-square rounded-md overflow-hidden'>
-                            
+                            <Image src={'/placeholder.svg'} alt={product.name} width={300} height={300} className='w-full h-full object-contain'/>
+
                         </div>
 
                     </Link>
