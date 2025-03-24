@@ -128,7 +128,7 @@ const ProductGrid = ({products}: Props) => {
                                 </h3>
 
                                 <p className='text-base font-semibold text-primary'>
-                                    ${product.price}
+                                    ₦{product.price}
                                 </p>
                             </div>
 
