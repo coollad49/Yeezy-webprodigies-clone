@@ -4,7 +4,7 @@ import { Minus, MoreVertical, Plus, ShoppingCart, X } from 'lucide-react'
 import React, { useState } from 'react'
 import { mockProduct, navbarData } from '@/lib/data'
 import Link from 'next/link'
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from './sheet'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './sheet'
 import { useCart } from '@/hooks/use-cart'
 import Image from 'next/image'
 
@@ -36,7 +36,9 @@ const ProductGrid = ({products}: Props) => {
                         </button>
                     </SheetTrigger>
                     <SheetContent className='w-full sm:max-w-md'>
-                        <SheetHeader>Your Cart</SheetHeader>
+                        <SheetHeader>
+                            <SheetTitle>Your Cart</SheetTitle>
+                        </SheetHeader>
                         {cartItems.length === 0 ? 
                         (<div className='flex gap-3 flex-col items-center justify-center h-[50vh]'>
                             <ShoppingCart className='h-12 w-12 text-gray-300'/>

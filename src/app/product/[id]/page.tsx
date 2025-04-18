@@ -2,6 +2,7 @@ import { getProduct } from '@/actions/product'
 import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
+import ProductQuantity from '@/components/product/product-quantity'
 
 type Props = {
     params : { id: string}
@@ -38,7 +39,7 @@ const ProductPage = async ({params: {id}}: Props) => {
                             <div className='flex flex-col sm:flex-row items-center justify-between gap-4'>
                                 <h1 className='text-2xl font-bold'>{product.name}</h1>
 
-                                {/* WIP: <ProductQuantity */}
+                                <ProductQuantity product={product}/>
 
                                 <div className='text-2xl font-bold'>₦{product.price}</div>
                             </div>
